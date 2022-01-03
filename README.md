@@ -3,6 +3,15 @@ An implementation of a generic min heap in (ANSI) C.
 
 This is inspired by and based on "Type-safe generic data structures in C" by Ian Fisher (https://iafisher.com/blog/2020/06/type-safe-generics-in-c).
 
+# General
+The implementation is based on a makro:
+DECL_HEAP(type, type_name, type_compare)
+
+This declares a min heap with elements of type "type".
+All declared functions will have the signature type_name_heap_FUNCTION.
+The heap struct will have the signature type_name_Heap.
+The type_compare function should return 0 if elements are equal, <0 if first element is bigger, >0 otherwise.
+
 # Usage (example for int min heap)
 ```c
 /* Comparison function for the chosen type. */
