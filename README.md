@@ -1,7 +1,7 @@
 # Heap
 An implementation of a generic min heap in (ANSI) C.
 
-This is inspired by an based on "Type-safe generic data structures in C" by Ian Fisher (https://iafisher.com/blog/2020/06/type-safe-generics-in-c).
+This is inspired by and based on "Type-safe generic data structures in C" by Ian Fisher (https://iafisher.com/blog/2020/06/type-safe-generics-in-c).
 
 # Usage (example for int min heap)
 ```c
