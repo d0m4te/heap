@@ -10,7 +10,8 @@ DECL_HEAP(type, type_name, type_compare)
 This declares a min heap with elements of type "type".
 All declared functions will have the signature type_name_heap_FUNCTION.
 The heap struct will have the signature type_name_Heap.
-The type_compare function should return 0 if elements are equal, <0 if first element is bigger, >0 otherwise.
+The type_compare function should accept two elements of type "type" as arguments and
+return 0 if elements are equal, <0 if first element is bigger, >0 otherwise.
 
 # Usage (example for int min heap)
 ```c
@@ -31,7 +32,7 @@ int main(void) {
   Int_Heap* heap;
   int popped;
   
-  /* initialize the heap */
+  /* initialize the heap with a capacity of 5 elements */
   heap = Int_heap_create(5);
   
   /* push and pop some values */
